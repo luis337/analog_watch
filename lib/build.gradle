@@ -1,0 +1,59 @@
+apply plugin: (Plugins.library)
+apply from: "../conf.gradle"
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+group = (Art.group)
+version = (Art.version)
+
+android {
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            publishMaven(MavenPublication) {
+                groupId (Art.group)
+                artifactId (Art.artifact)
+                version (Art.version)
+            }
+        }
+    }
+}
+
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_API_KEY')
+    publications = ['publishMaven']
+    pkg {
+        repo = (Art.repo)
+        name = (Art.name)
+        userOrg = user
+        licenses = ['Unlicense']
+        vcsUrl = "https://github.com/luis337/${Art.name}.git"
+        labels = ['kotlin', 'android']
+        publicDownloadNumbers = true
+        githubRepo = "luis337/${Art.name}"
+        version {
+            name = (Art.version)
+            desc = (Art.desc)
+            vcsTag = (Art.version)
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+}

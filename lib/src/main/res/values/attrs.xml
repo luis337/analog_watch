@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Clock">
+        <attr name="time" format="float"/>
+        <attr name="color_shape_circle" format="color"/>
+        <attr name="color_shape_time" format="color"/>
+        <attr name="color_am_pm" format="color"/>
+        <attr name="color_time" format="color"/>
+        <attr name="is24hours" format="boolean"/>
+    </declare-styleable>
+</resources>
