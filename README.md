@@ -15,3 +15,11 @@ analogWatch.apply {
     is24Hours = false
 }
 ```
+
+## Import
+
+```gradle
+dependencies {
+    implementation("com.luis337.analogwatch:analogWatch:1.1")
+}
+```
