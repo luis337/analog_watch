@@ -1,3 +1,5 @@
+[ ![Download](https://api.bintray.com/packages/luis37/maven/analog_watch/images/download.svg) ](https://bintray.com/luis37/maven/analog_watch/_latestVersion)
+
 # analog_watch
 An Android custom analog watch. It just works as a decoration.
 
