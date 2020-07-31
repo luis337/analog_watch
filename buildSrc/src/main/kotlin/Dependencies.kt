@@ -42,7 +42,7 @@ object Publish {
     object Meta {
         const val group = "com.luis337.analogwatch"
         const val artifact = "analogWatch"
-        const val version = "1.0"
+        const val version = "1.1"
     }
     object Pom {
         const val name = "analog_watch"
