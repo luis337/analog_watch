@@ -1,3 +1,2 @@
-include ':lib'
-include ':app'
+include(":lib",":app")
 rootProject.name = "Analog watch"

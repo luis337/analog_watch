@@ -38,6 +38,37 @@ object Art {
     const val repo = "maven"
 }
 
+object Publish {
+    object Meta {
+        const val group = "com.luis337.analogwatch"
+        const val artifact = "analogWatch"
+        const val version = "1.0"
+    }
+    object Pom {
+        const val name = "analog_watch"
+        const val desc = "An Android custom analog watch. It just works as a decoration."
+        const val url = "https://github.com/luis337/analog_watch"
+    }
+    object Lic {
+        const val name = "The Apache License, Version 2.0"
+        const val url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+    }
+    object Dev {
+        const val id = "bintray-luis37-maven"
+        const val name = "Luis"
+        const val email = "luis337@gmail.com"
+    }
+    object Scm {
+        const val con = "scm:git:git://github.com/luis337/analog_watch.git"
+        const val devc = "scm:git:ssh://github.com/luis337/analog_watch.git"
+        const val url = "https://github.com/luis337/analog_watch"
+    }
+    object Repo {
+        const val name = "bintray"
+        const val url = "https://api.bintray.com/maven/luis37/maven/analog_watch"
+    }
+}
+
 object Libraries {
     private object Versions {
         const val appCompat = "1.1.0"
